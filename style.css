@@ -5,15 +5,48 @@ body, html {
     padding: 0;
     height: 100%;
     background-color: #003366;
+    font-family: "Nintendo DS BIOS", sans-serif;
 }
 
-p, h2 {
-    font-family: "Nintendo DS BIOS", sans-serif;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.border1 {
+    width: 90%;
+    max-width: 600px; /* Largura máxima para grandes telas */
+    border: 2px solid;
+    background-color: aliceblue;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.border2 {
+    width: 100%;
+    border: 2px solid;
+    background-color: aliceblue;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    border: 2px solid;
+    background-color: #228B22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .title {
     font-size: 25px;
-    text-align: center;
     color: #fff;
 }
 
@@ -43,45 +76,30 @@ p, h2 {
     margin: 0;
 }
 
-.container {
-    position: relative;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.border1 {
-    width: 600px;
-    border: 2px solid;
-    background-color: aliceblue;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.border2 {
-    width: 100%;
-    border: 2px solid;
-    background-color: aliceblue;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.header {
-    width: 100%;
-    height: 50px;
-    border: 2px solid;
-    background-color: #228B22;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
 .credits {
     margin-top: 20px;
     font-size: 14px;
     text-align: center;
     color: #666;
+}
+
+/* Media Queries para ajustar a responsividade */
+@media (max-width: 768px) {
+    .title, .rumor-title, .rumor-content, .rumor-author {
+        font-size: smaller; /* Ajusta o tamanho da fonte para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .border1 {
+        width: 95%; /* Ajusta a largura para telas muito pequenas */
+    }
+
+    .header {
+        height: 40px; /* Ajusta a altura do cabeçalho para telas pequenas */
+    }
+
+    .credits {
+        font-size: 12px; /* Ajusta o tamanho da fonte dos créditos para telas pequenas */
+    }
 }
