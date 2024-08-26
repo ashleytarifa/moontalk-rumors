@@ -15,7 +15,8 @@
     --rumor-border: #ddd;
     --rumor-main: #f9f9f9;
     --rumor-main-completed: #94d83c;
-
+    --button-idle: #7fb933;
+    --button-hover: #228B22;
 }
 
 body, html {
@@ -109,6 +110,41 @@ body, html {
     text-align: center;
     color: var(--text-lighter);
 }
+
+.reaction-buttons {
+    margin-top: 10px;
+}
+
+button {
+    font-family: "Pixeloid Sans", sans-serif;
+    background-color: var(--button-idle);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+button:focus {
+    outline: none;
+}
+
+.like-button, .dislike-button {
+    display: inline-flex;
+    align-items: center;
+}
+
+.like-button span, .dislike-button span {
+    margin-left: 5px;
+}
+
 
 @media (max-width: 768px) {
     .title, .rumor-title, .rumor-content, .rumor-author {
