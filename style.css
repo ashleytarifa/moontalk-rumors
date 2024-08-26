@@ -88,23 +88,22 @@ body, html {
     color: #666;
 }
 
-/* Media Queries para ajustar a responsividade */
 @media (max-width: 768px) {
     .title, .rumor-title, .rumor-content, .rumor-author {
-        font-size: smaller; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: smaller;
     }
 }
 
 @media (max-width: 480px) {
     .border1 {
-        width: 95%; /* Ajusta a largura para telas muito pequenas */
+        width: 95%;
     }
 
     .header {
-        height: 40px; /* Ajusta a altura do cabeçalho para telas pequenas */
+        height: 40px;
     }
 
     .credits {
-        font-size: 12px; /* Ajusta o tamanho da fonte dos créditos para telas pequenas */
+        font-size: 12px;
     }
 }
