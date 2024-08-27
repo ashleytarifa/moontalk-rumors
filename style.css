@@ -5,18 +5,41 @@
     font-style: normal;
 }
 
+@media (max-width: 768px) {
+    .title, .rumor-title, .rumor-content, .rumor-author {
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 480px) {
+    .border1 {
+        width: 95%;
+    }
+
+    .header {
+        height: 40px;
+    }
+
+    .credits {
+        font-size: 12px;
+    }
+}
+
 :root{
-    --bg: #003366;
+    --title: #003366;
+    --bg: #094b8e;
     --border-bg: aliceblue;
-    --header: #228B22;
+    --header: #2dc23d;
     --text: #333;
     --text-lighter: #666;
-    --highlight: #fff;
+    --white: #fff;
     --rumor-border: #ddd;
     --rumor-main: #f9f9f9;
-    --rumor-main-completed: #94d83c;
-    --button-idle: #7fb933;
-    --button-hover: #228B22;
+    --rumor-main-completed: #9deb37;
+    --rumor-completed-hover: #93ce35;
+    --rumor-main-hover: #a9a9a9;
+    --button-idle: #22b02e;
+    --button-hover: #179d1f;
 }
 
 body, html {
@@ -38,7 +61,7 @@ body, html {
 
 .border1 {
     width: 90%;
-    max-width: 600px;
+    max-width: 750px;
     border: 2px solid;
     background-color: var(--border-bg);
     padding: 20px;
@@ -66,7 +89,7 @@ body, html {
 
 .title {
     font-size: 25px;
-    color: var(--highlight);
+    color: var(--white);
 }
 
 .rumor-item {
@@ -79,7 +102,7 @@ body, html {
 
 .rumor-title {
     font-size: 22px;
-    color: var(--bg);
+    color: var(--title);
     margin: 0 0 10px;
 }
 
@@ -103,6 +126,15 @@ body, html {
     border-radius: 5px;
     background-color: var(--rumor-main-completed);
 }
+.rumor-item:hover {
+    background-color: var(--rumor-main-hover);
+    transition: background-color 0.3s ease;
+}
+
+.rumor-completed:hover {
+    background-color: var(--rumor-completed-hover);
+    transition: background-color 0.3s ease;
+}
 
 .credits {
     margin-top: 20px;
@@ -118,7 +150,7 @@ body, html {
 button {
     font-family: "Pixeloid Sans", sans-serif;
     background-color: var(--button-idle);
-    color: #fff;
+    color: var(--white);
     border: none;
     padding: 8px 12px;
     margin-right: 10px;
@@ -146,22 +178,3 @@ button:focus {
 }
 
 
-@media (max-width: 768px) {
-    .title, .rumor-title, .rumor-content, .rumor-author {
-        font-size: smaller;
-    }
-}
-
-@media (max-width: 480px) {
-    .border1 {
-        width: 95%;
-    }
-
-    .header {
-        height: 40px;
-    }
-
-    .credits {
-        font-size: 12px;
-    }
-}
