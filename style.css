@@ -11,21 +11,43 @@
     .title, .rumor-title, .rumor-content, .rumor-author {
         font-size: smaller;
     }
+
+    .header .title {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 480px) {
-    .border1 {
-        width: 95%;
+
+    .container {
+        width: 100%;
     }
 
-    .header {
-        height: 40px;
+    .header .title {
+        font-size: 16px;
     }
 
     .credits {
         font-size: 12px;
     }
+
+    .rumor-item .rumor-content,
+    .rumor-completed .rumor-content {
+        font-size: 14px;
+    }
+
+    .rumor-item .rumor-title,
+    .rumor-completed .rumor-title {
+        font-size: 16px;
+    }
+
+    .rumor-author {
+        font-size: 12px;
+    }
+
+
 }
+
 
 :root{
     --title: #003366;
@@ -164,6 +186,7 @@ button {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 button:hover {
