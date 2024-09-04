@@ -73,9 +73,9 @@ body, html {
     background-color: var(--bg);
     font-family: "Pixeloid Sans", sans-serif;
     background-image: url("bgimg/bgimg.png");
-    background-position: right top;
-    background-repeat: repeat-y;
+    background-position: left top;
     background-size: 100%;
+    background-attachment: fixed;
 }
 
 .container {
@@ -207,4 +207,31 @@ button:focus {
     margin-top: 5px;
 }
 
+.pages {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pages button {
+    font-family: "Pixeloid Sans", sans-serif;
+    background-color: var(--button-idle);
+    color: var(--white);
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.pages button:hover {
+    background-color: var(--button-hover);
+}
+
+.pages button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
 
